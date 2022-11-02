@@ -52,6 +52,7 @@
     color: #0e161a;
     padding-left: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .btn-submit:hover{
