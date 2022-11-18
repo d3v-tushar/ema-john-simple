@@ -14,3 +14,24 @@
     background-color: #FFE0B3;
     /* text-align: center; */
 }
+
+.pagination{
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+
+.pagination button{
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.pagination .selected{
+    background-color: orange;
+    border: gold;
+    font-weight: bold;
+    padding: 8px;
+    width: 40px;
+    border-radius: 7px;
+}
