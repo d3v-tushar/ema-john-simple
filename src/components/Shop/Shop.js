@@ -11,7 +11,7 @@ const Shop = () => {
     const [count, setCount] = useState(0);
     const [cart, setCart] = useState([]);
     const [page, setPage] = useState(0);
-    const [size, setSize] = useState(10);
+    const [size, setSize] = useState(15);
 
     useEffect(() =>{
         const url = `http://localhost:5000/products?page=${page}&size=${size}`;
@@ -45,7 +45,7 @@ const Shop = () => {
                     const quantity = storedCart[id];
                     addedProducts.quantity = quantity;
                     savedCart.push(addedProducts);
-                    console.log(addedProducts);
+                    //console.log(addedProducts);
                 }
             }
         setCart(savedCart);
@@ -94,14 +94,14 @@ const Shop = () => {
                     [...Array(pages).keys()].map(number => 
                     <button 
                     key={number}
-                    className={page === number && 'selected'}
+                    className={page === number ? 'selected' : undefined}
                     onClick={() => setPage(number)}>{number + 1}
                     </button>)
                 }
                 <select onChange={event => setSize(event.target.value)}>
                     <option value="5">5</option>
-                    <option value="10" selected>10</option>
-                    <option value="15">15</option>
+                    <option value="10">10</option>
+                    <option value="15" selected>15</option>
                     <option value="20">20</option>
                 </select>
             </div>
